@@ -9,7 +9,7 @@ function loadMenu(){
         <div class="col-md-10 text-right menu-1">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="work-grid.html">Um pouco do nosso trabalho</a></li>
+            <!--li><a href="work-grid.html">Um pouco do nosso trabalho</a></li-->
             <li><a href="services.html">Serviços</a></li>
             <li><a href="about.html">Sobre</a></li>
             <li><a href="shop.html">Loja</a></li>
