@@ -25,7 +25,7 @@ loadMenu()
 
 function loadHeader(title) {
   document.querySelector('#header-section').innerHTML = `
-  <section id="home" class="video-hero" style="height: 500px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+  <section id="home" class="video-hero" style="height: 500px; background-image: url(images/147.png);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
     <div class="overlay"></div>
     <div class="display-t display-t2 text-center">
       <div class="display-tc display-tc2">
@@ -84,7 +84,7 @@ function loadFooter() {
         </div>
       </div>
     </div>
-    <div class="copy" style="height: 25px;">
+    <div class="copy" style="height: 55px; padding: 0;">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">

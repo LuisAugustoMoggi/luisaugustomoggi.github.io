@@ -47,6 +47,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<link rel="stylesheet" href="css/estilo.css">
 	</head>
 	<body>
 		
@@ -55,16 +56,15 @@
 	<div id="page">
 		<div id="nav-bar"></div>
 
-		<section id="home" class="video-hero" style="height: 700px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+		<section id="home" class="video-hero" style="height: 700px; background-image: url(images/147.png);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
 			<div class="overlay"></div>
-			<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=vqqt5p0q-eU',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a> 
 			<div class="display-t text-center">
 				<div class="display-tc">
 					<div class="container">
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
-								<h2>Take on your biggest projects and goals</h2>
-								<p>with Unapp's high quality features</p>
+								<h2>Seu próprio sistema esta bem mais próximo</h2>
+								<p>Fale conosco</p>
 								<p><a href="contact.html" class="btn btn-primary btn-lg btn-custom">Entre em contato</a></p>
 							</div>
 						</div>
@@ -105,7 +105,40 @@
 
 		<div class="colorlib-services colorlib-bg-white">
 			<div class="container">
-				<div id="content-services" class="row"> 
+				<div class="row"> 
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="icon-download"></i>
+							</span>
+							<div class="desc">
+								<h3>Desevolvimento de Sistemas</h3>
+								<p>10 anos de experiência em Java com conhecimentos em vários franmeworks como: JPA, JSF, Spring boot, JDBC, Banco de dados relacionais(Postgres, Mysql, Oracle), Banco de dados NoSql(MongoDb).</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="icon-layers"></i>
+							</span>
+							<div class="desc">
+								<h3>Consultoria Open Source</h3>
+								<p>Precisa de uma ajudinha com seus servidores Linux, está em dúvida se sua empresa pode trocar os sistemas proprietários por sistemas de código aberto, podemos ajudar.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="icon-gears"></i>
+							</span>
+							<div class="desc">
+								<h3>Consultoria DevOps</h3>
+								<p>Toda a infraestrura que trabalhamos está hospedada em containers docker e parte dos sistemas usa kubernetes. Em todos sistemas utilizamos alguma ferramenta de CI/CD para mantê-los sempre atualizados.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -309,6 +342,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
+
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -332,27 +366,7 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/script.js"></script>
-	<script type="text/javascript">
-		fetch()
-		.then(res => res.json())
-		.then(res => {
-			for(let index = 0; index < 3; index++) {
-				const service = res[index];			
-				document.querySelector("#content-services").innerHTML += 
-				`<div class="col-md-4 text-center animate-box">
-					<div class="services">
-						<span class="icon">
-							<i class="${service.icon}"></i>
-						</span>
-						<div class="desc">
-							<h3>${service.title}</h3>
-							<p>${service.description}</p>
-						</div>
-					</div>
-				</div>`	
-			}
-		});
-	</script>
+	 
 
 	</body>
 </html>

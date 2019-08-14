@@ -47,6 +47,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<link rel="stylesheet" href="css/estilo.css">
 	</head>
 	<body>
 		
@@ -99,9 +100,9 @@
 		fetch("json/services.json", {headers: {'Accept': 'application/json'}})
 		.then(res => res.json())
 		.then(res => {
-			res.forEach(service => {
+			res.forEach(service => { 
 				document.querySelector("#content-section").innerHTML +=			
-					`<div class="col-md-4 text-center animate-box">
+					`<div class="col-md-4 text-center" style="min-height: 420px;">
 						<div class="services">
 							<span class="icon">
 								<i class="${service.icon}"></i>
