@@ -12,7 +12,7 @@ function loadMenu(){
             <!--li><a href="work-grid.html">Um pouco do nosso trabalho</a></li-->
             <li><a href="services.html">Serviços</a></li>
             <li><a href="about.html">Sobre</a></li>
-            <li><a href="shop.html">Loja</a></li>
+            <!--li><a href="shop.html">Loja</a></li-->
             <li><a href="contact.html">Contato</a></li>
           </ul>
         </div>
