@@ -12,6 +12,7 @@ function loadMenu(){
             <!--li><a href="work-grid.html">Um pouco do nosso trabalho</a></li-->
             <li><a href="services.html">Serviços</a></li>
             <li><a href="about.html">Sobre</a></li>
+            <li><a href="/blog">Blog</a></li>
             <!--li><a href="shop.html">Loja</a></li-->
             <li><a href="contact.html">Contato</a></li>
           </ul>
@@ -66,6 +67,7 @@ function loadFooter() {
               <li><a href="index.html"><i class="icon-check"></i> Home</a></li>
               <li><a href="services.html"><i class="icon-check"></i> Serviços</a></li>
               <li><a href="about.html"><i class="icon-check"></i> Sobre</a></li> 
+              <li><a href="/blog"><i class="icon-check"></i> Blog</a></li>
               <li><a href="contact.html"><i class="icon-check"></i> Contato</a></li> 
             </ul>
           </p>
