@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2020-04-21T13:13:00-05:00</updated><id>/blog/feed.xml</id><title type="html">| Livre - Blog</title><subtitle>| Livre - Um estilo de vida</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/blog/jekyll/update/2020/04/21/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-04-21T11:39:02-05:00</published><updated>2020-04-21T11:39:02-05:00</updated><id>/blog/jekyll/update/2020/04/21/welcome-to-jekyll</id><content type="html" xml:base="/blog/jekyll/update/2020/04/21/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2020-04-21T14:02:17-05:00</updated><id>/blog/feed.xml</id><title type="html">| Livre - Blog</title><subtitle>| Livre - Um estilo de vida</subtitle><entry><title type="html">Shell Utils</title><link href="/blog/shell/2020/04/21/shell-utils.html" rel="alternate" type="text/html" title="Shell Utils" /><published>2020-04-21T11:39:02-05:00</published><updated>2020-04-21T11:39:02-05:00</updated><id>/blog/shell/2020/04/21/shell-utils</id><content type="html" xml:base="/blog/shell/2020/04/21/shell-utils.html">&lt;p&gt;Alguns comandos shell pra facilitar a vida&lt;/p&gt;
+
+&lt;h1 id=&quot;replace-de-strings&quot;&gt;Replace de Strings&lt;/h1&gt;
+&lt;h4 id=&quot;script&quot;&gt;Script&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  texto=&quot;abc123&quot;
+  de=&quot;abc&quot;
+  para=&quot;def&quot;
+  replace=`echo $texto | sed -e &quot;s/$de/$para/g&quot;` 
+  echo $replace
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;resultado&quot;&gt;Resultado&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ def123
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;declarar-variáveis-dinâmicas&quot;&gt;Declarar variáveis dinâmicas&lt;/h1&gt;
+&lt;h4 id=&quot;script-1&quot;&gt;Script&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  nome=&quot;minha_var&quot;
+  valor=&quot;valor de var&quot;
+  eval &quot;$nome&quot;=&quot;$valor&quot;
+  echo $minha_var
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;resultado-1&quot;&gt;Resultado&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ valor de var
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;lendo-parametros-em-um-script-shell&quot;&gt;Lendo Parametros em um script shell&lt;/h1&gt;
+&lt;h4 id=&quot;script-2&quot;&gt;Script&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function set {
+    _command=`echo $1 | sed -e &quot;s/-//g&quot;`
+    eval &quot;$_command&quot;=&quot;$2&quot;
+}
+
+function read_parameter {
+    if [[ $1 == *&quot;$2&quot;* ]];then
+        key=`echo $1 | cut -d = -f1`
+        value=`echo $1 | cut -d = -f2`
+        set &quot;$key&quot; &quot;$value&quot;
+    fi
+}
+
+for _param in $*; do 
+    read_parameter $_param &quot;--class&quot; 
+    read_parameter $_param &quot;--baseUrl&quot;    
+    read_parameter $_param &quot;-t&quot;     
+done
+
+echo $class
+echo $baseUrl
+echo $t
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;resultado-2&quot;&gt;Resultado&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ ./meu_script --class=teste --baseUrl=localhost -t=10
+  ------------------
+  teste
+  localhost
+  10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;string-uppercase&quot;&gt;String uppercase&lt;/h1&gt;
+&lt;h4 id=&quot;script-3&quot;&gt;Script&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  texto=&quot;tudo minusculo&quot;
+  echo ${texto^^}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;resultado-3&quot;&gt;Resultado&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ TUDO MINUSCULO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Alguns comandos shell pra facilitar a vida</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/blog/jekyll/update/2020/04/21/welcome-to-jekyll-copy.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-04-21T11:39:02-05:00</published><updated>2020-04-21T11:39:02-05:00</updated><id>/blog/jekyll/update/2020/04/21/welcome-to-jekyll%20copy</id><content type="html" xml:base="/blog/jekyll/update/2020/04/21/welcome-to-jekyll-copy.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
