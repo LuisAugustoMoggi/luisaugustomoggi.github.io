@@ -1,0 +1,46 @@
+[{
+    "id": 1,
+    "nome": "Estab. 1",
+    "tipo": "Sorveteria",
+    "telefone": "5519999999999",
+    "whatsapp": "5519999999999",
+    "facebook": "https://google.com",
+    "instagram": "https://google.com",
+    "endereco": "Rua 1, 1234 - Bairro a. Cidade - SP",
+    "fotos": [
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg"
+    ]
+},{
+    "id": 2,
+    "nome": "Estab. 2",
+    "tipo": "Padaria",
+    "telefone": "5519999999999",
+    "whatsapp": "5519999999999",
+    "facebook": "https://google.com",
+    "instagram": "https://google.com",
+    "endereco": "Rua 1, 1234 - Bairro a. Cidade - SP",
+    "fotos": [
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg"
+    ]
+},{
+    "id": 3,
+    "nome": "Estab. 3",
+    "tipo": "Lanchonete",
+    "telefone": "5519999999999",
+    "whatsapp": "5519999999999",
+    "facebook": "https://google.com",
+    "instagram": "https://google.com",
+    "endereco": "Rua 1, 1234 - Bairro a. Cidade - SP",
+    "fotos": [
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg",
+      "https://tecnoblog.net/wp-content/uploads/2020/08/kali-linux-windows-10.jpg"
+    ]
+}]
